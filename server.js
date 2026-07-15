@@ -69,7 +69,7 @@ io.use((socket, next) => {
               });
             });
       });
-// test
+
       socket.on('new_message', (data) => {
         io.sockets.emit('new_message', {message: data.message, username: socket.user.username, login_user: socket.user.username});
       });
